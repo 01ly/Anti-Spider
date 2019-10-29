@@ -14,10 +14,10 @@ def decrypt_woff_tag(tag,TTGlyphs,d_list):
                 text = dec(i.text)
                 for index,name in enumerate(TTGlyphs):
                     if text in name:
-                        i = d_list[index]  
+                        i = d_list[index]
             else:
                 continue
-        elif not isinstance(i, str):
+        if not isinstance(i, str):
             continue
         _.append(i)
     return ''.join(_)
